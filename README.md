@@ -10,11 +10,6 @@ Interactive command-line prompts to enter:
 - Ad Groups
 - Keywords
 
-Generates:
-- `campaign.json`
-- `ad_groups.json`
-- `keywords.json`
-
 Clean, well-organized output files ready to use in SEM workflows.
 
 
