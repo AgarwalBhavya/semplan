@@ -1,0 +1,21 @@
+import pandas as pd
+import random
+
+# Generate dummy data
+keywords = [f"Keyword {i}" for i in range(1, 1001)]
+avg_monthly_searches = [random.randint(100, 100000) for _ in range(1000)]
+competition = [random.choice(["Low", "Medium", "High"]) for _ in range(1000)]
+top_of_page_bid_low = [round(random.uniform(0.1, 2.0), 2) for _ in range(1000)]
+top_of_page_bid_high = [round(low + random.uniform(0.1, 3.0), 2) for low in top_of_page_bid_low]
+
+# Create DataFrame
+df = pd.DataFrame({
+    "Keyword": keywords,
+    "Avg. Monthly Searches": avg_monthly_searches,
+    "Competition": competition,
+    "Top of Page Bid (Low)": top_of_page_bid_low,
+    "Top of Page Bid (High)": top_of_page_bid_high
+})
+
+# Save to CSV
+df.to_csv("keyword_raw.csv", index=False)
